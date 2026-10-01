@@ -38,10 +38,12 @@ sitemap.xml
 
 ## GitHub Pages
 
-1. Push this repository to `https://github.com/r-sarviro/portfolio.git`
-2. Settings → Pages → Source: **Deploy from a branch**
-3. Branch: `main` / folder: `/` (root)
-4. Wait for the Pages build; site will be at `https://r-sarviro.github.io/portfolio/`
+Code is on `main`. Enable hosting once:
+
+1. Open https://github.com/r-sarviro/portfolio/settings/pages
+2. **Source:** Deploy from a branch
+3. **Branch:** `main` / folder: `/` (root) → Save
+4. Site URL: https://r-sarviro.github.io/portfolio/
 
 No build step is required.
 
