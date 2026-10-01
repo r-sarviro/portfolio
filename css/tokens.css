@@ -1,0 +1,42 @@
+:root {
+  --ink: #0f1419;
+  --ink-soft: #2a323a;
+  --muted: #5c6670;
+  --line: rgba(15, 20, 25, 0.12);
+  --line-strong: rgba(15, 20, 25, 0.22);
+  --paper: #eef1f2;
+  --paper-elevated: #f7f9fa;
+  --accent: #1f6f78;
+  --accent-deep: #15555c;
+  --accent-soft: rgba(31, 111, 120, 0.12);
+  --focus: #1f6f78;
+
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --radius-sm: 2px;
+  --max: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 2.2vw, 1.875rem);
+  --text-2xl: clamp(2rem, 4vw, 3rem);
+  --text-3xl: clamp(2.75rem, 7vw, 4.75rem);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 18px 40px rgba(15, 20, 25, 0.08);
+  --header-h: 4rem;
+}
