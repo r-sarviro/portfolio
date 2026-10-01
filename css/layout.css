@@ -153,6 +153,12 @@
   transform: none;
 }
 
+noscript .reveal,
+html.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;

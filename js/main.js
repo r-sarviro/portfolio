@@ -34,6 +34,15 @@
     return;
   }
 
+  const markIfVisible = (el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      el.classList.add("is-visible");
+      return true;
+    }
+    return false;
+  };
+
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -47,7 +56,9 @@
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
 
-    reveals.forEach((el) => observer.observe(el));
+    reveals.forEach((el) => {
+      if (!markIfVisible(el)) observer.observe(el);
+    });
   } else {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
