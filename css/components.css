@@ -24,7 +24,7 @@
 .btn-primary:hover {
   background: var(--accent-deep);
   border-color: var(--accent-deep);
-  color: #fff;
+  color: var(--btn-on-ink);
 }
 
 .btn-ghost {
@@ -126,7 +126,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(15, 20, 25, 0.28));
+  background: linear-gradient(180deg, transparent 55%, var(--portrait-scrim));
   pointer-events: none;
 }
 
@@ -141,7 +141,7 @@
 /* Impact */
 .impact {
   border-block: 1px solid var(--line);
-  background: rgba(247, 249, 250, 0.72);
+  background: var(--surface-tint);
 }
 
 .impact-grid {
@@ -263,7 +263,7 @@
 .viz-security {
   background:
     radial-gradient(circle at 80% 20%, var(--accent-soft), transparent 45%),
-    linear-gradient(160deg, #f7f9fa, #dde5e7);
+    linear-gradient(160deg, var(--viz-grad-start), var(--viz-grad-end));
 }
 
 .viz-security .bars {
@@ -286,8 +286,8 @@
 
 .viz-launch {
   background:
-    linear-gradient(135deg, rgba(31, 111, 120, 0.08), transparent 50%),
-    #f7f9fa;
+    linear-gradient(135deg, var(--viz-launch-glow), transparent 50%),
+    var(--viz-grad-start);
 }
 
 .viz-orbit {
@@ -361,7 +361,7 @@
   padding: 0.28rem 0.55rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--tech-chip-bg);
 }
 
 /* Expertise */
@@ -444,7 +444,7 @@
 .cred-block {
   padding: var(--space-5);
   border: 1px solid var(--line);
-  background: rgba(247, 249, 250, 0.7);
+  background: var(--surface-tint);
 }
 
 .cred-block h3 {

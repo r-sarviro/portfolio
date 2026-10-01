@@ -1,8 +1,46 @@
 (() => {
+  const THEME_KEY = "portfolio-theme";
+  const root = document.documentElement;
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav a[href^='#']");
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+
+  const getPreferredTheme = () => {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored === "light" || stored === "dark") return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  };
+
+  const syncThemeToggle = (theme) => {
+    if (!themeToggle) return;
+    const isDark = theme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark
+        ? themeToggle.dataset.labelToLight || "Switch to light theme"
+        : themeToggle.dataset.labelToDark || "Switch to dark theme"
+    );
+  };
+
+  const applyTheme = (theme, { persist = false } = {}) => {
+    const next = theme === "dark" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    root.style.colorScheme = next;
+    syncThemeToggle(next);
+    if (persist) localStorage.setItem(THEME_KEY, next);
+  };
+
+  applyTheme(getPreferredTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      applyTheme(current === "dark" ? "light" : "dark", { persist: true });
+    });
+  }
 
   const onScroll = () => {
     if (!header) return;
