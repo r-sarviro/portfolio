@@ -6,10 +6,10 @@ Static personal portfolio (HTML / CSS / JS) for GitHub Pages.
 
 ## Locales
 
-| Path | Language |
-|------|----------|
-| `/` or `index.html` | Russian |
-| `/en/` | English |
+| Path                | Language |
+| ------------------- | -------- |
+| `/` or `index.html` | Russian  |
+| `/en/`              | English  |
 
 ## Run locally
 
