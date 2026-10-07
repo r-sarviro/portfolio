@@ -7,7 +7,7 @@
     (() => {
       const k = "portfolio-theme";
       const stored = localStorage.getItem(k);
-      const theme = stored || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      const theme = stored || "dark";
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
