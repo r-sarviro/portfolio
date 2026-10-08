@@ -90,6 +90,79 @@
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const reveals = document.querySelectorAll(".reveal");
 
+  if (!prefersReduced) {
+    const clearCaseMotionStyles = (el) => {
+      el.style.animation = "";
+      el.style.transition = "";
+      el.style.transform = "";
+      el.style.opacity = "";
+    };
+
+    const getCaseMovers = (caseEl) => {
+      const svg = caseEl.querySelector(".case-visual-svg");
+      if (!svg) return [];
+      if (svg.classList.contains("case-visual-svg--wheat")) {
+        return Array.from(svg.querySelectorAll(".viz-ear, .viz-sun"));
+      }
+      return [svg];
+    };
+
+    const settleCaseMotion = (caseEl) => {
+      const visual = caseEl.querySelector(".case-visual");
+      if (!visual) return;
+
+      const styles = getComputedStyle(visual);
+      const duration = styles.getPropertyValue("--case-motion-duration").trim() || "1.5s";
+      const ease = styles.getPropertyValue("--case-motion-ease").trim() || "ease-in-out";
+
+      getCaseMovers(caseEl).forEach((el) => {
+        const computed = getComputedStyle(el);
+        const transform = computed.transform;
+        const opacity = computed.opacity;
+
+        el.style.animation = "none";
+        el.style.transition = "none";
+        el.style.transform = transform === "none" ? "none" : transform;
+        if (el.classList.contains("viz-sun")) el.style.opacity = opacity;
+
+        void el.getBoundingClientRect();
+
+        el.style.transition = `transform ${duration} ${ease}, opacity ${duration} ${ease}`;
+        el.style.transform = "none";
+        if (el.classList.contains("viz-sun")) el.style.opacity = "1";
+
+        const onEnd = (event) => {
+          if (event.target !== el) return;
+          if (event.propertyName !== "transform" && event.propertyName !== "opacity") return;
+          el.removeEventListener("transitionend", onEnd);
+          clearCaseMotionStyles(el);
+        };
+
+        el.addEventListener("transitionend", onEnd);
+      });
+    };
+
+    const activateCaseMotion = (caseEl) => {
+      getCaseMovers(caseEl).forEach(clearCaseMotionStyles);
+      caseEl.classList.add("is-hot");
+    };
+
+    const deactivateCaseMotion = (caseEl) => {
+      if (!caseEl.classList.contains("is-hot")) return;
+      caseEl.classList.remove("is-hot");
+      settleCaseMotion(caseEl);
+    };
+
+    document.querySelectorAll(".case").forEach((caseEl) => {
+      caseEl.addEventListener("pointerenter", () => activateCaseMotion(caseEl));
+      caseEl.addEventListener("pointerleave", () => deactivateCaseMotion(caseEl));
+      caseEl.addEventListener("focusin", () => activateCaseMotion(caseEl));
+      caseEl.addEventListener("focusout", (event) => {
+        if (!caseEl.contains(event.relatedTarget)) deactivateCaseMotion(caseEl);
+      });
+    });
+  }
+
   if (prefersReduced) {
     reveals.forEach((el) => el.classList.add("is-visible"));
     return;

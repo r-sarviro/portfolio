@@ -48,8 +48,8 @@
       <a class="brand" href="#top">Roman Sarviro</a>
       <nav class="nav" id="site-nav" data-nav aria-label="Основная навигация">
         <ul class="nav-list">
-          <li><a href="#work">Работы</a></li>
-          <li><a href="#expertise">Экспертиза</a></li>
+          <li><a href="#work">Опыт</a></li>
+          <li><a href="#expertise">Навыки</a></li>
           <li><a href="#credentials">Образование</a></li>
           <li><a href="#contact">Контакты</a></li>
         </ul>
@@ -98,13 +98,13 @@
     <section class="hero" id="top" aria-labelledby="hero-name">
       <div class="hero-copy">
         <h1 class="hero-name" id="hero-name">Roman Sarviro</h1>
-        <p class="hero-role">Senior React / React Native Engineer</p>
+        <p class="hero-role">Старший React / React Native разработчик</p>
         <p class="hero-lead">
-          Проектирую и поставляю мобильные и веб-продукты на React Native и React:
-          архитектура, performance, native-модули и безопасные production-релизы.
+          Разрабатываю мобильные и веб-приложения на React Native и React / Next.js
+          на всём жизненном цикле — от архитектуры до релиза.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Избранные работы</a>
+          <a class="btn btn-primary" href="#work">Опыт</a>
           <a class="btn btn-ghost" href="#contact">Связаться</a>
         </div>
       </div>
@@ -113,121 +113,115 @@
           <img
             src="./assets/roman-sarviro.jpg"
             alt="Портрет Романа Сарвиро"
-            width="640"
-            height="800"
+            width="1024"
+            height="1024"
             fetchpriority="high"
           >
         </figure>
-        <p class="portrait-caption">5+ лет коммерческой разработки</p>
       </div>
     </section>
 
-    <section class="impact" aria-label="Ключевые результаты">
+    <section class="snapshot" aria-label="Краткий профиль">
       <div class="section">
-        <div class="impact-grid reveal">
-          <div class="impact-item">
-            <div class="impact-value">~15×</div>
-            <p class="impact-label">ускорение cold start в BabyHelper</p>
+        <div class="snapshot-grid reveal">
+          <div class="snapshot-item">
+            <div class="snapshot-head">
+              <svg class="snapshot-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7.5v4.5l3 1.8"/>
+              </svg>
+              <h3 class="snapshot-label">Стаж</h3>
+            </div>
+            <p class="snapshot-text">Больше 5 лет коммерческой разработки</p>
           </div>
-          <div class="impact-item">
-            <div class="impact-value">6&nbsp;000+</div>
-            <p class="impact-label">строк избыточного кода удалено</p>
+          <div class="snapshot-item">
+            <div class="snapshot-head">
+              <svg class="snapshot-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13 4.5L5.5 14.5h5.8l-1.1 6 8.8-11h-5.7V4.5z"/>
+              </svg>
+              <h3 class="snapshot-label">Упор</h3>
+            </div>
+            <p class="snapshot-text">Производительность, сложные миграции и стабильные релизы</p>
           </div>
-          <div class="impact-item">
-            <div class="impact-value">New Arch</div>
-            <p class="impact-label">миграция на Fabric, TurboModules, JSI</p>
+          <div class="snapshot-item">
+            <div class="snapshot-head">
+              <svg class="snapshot-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3.5" y="3.5" width="12" height="12" rx="2"/>
+                <rect x="8.5" y="8.5" width="12" height="12" rx="2"/>
+              </svg>
+              <h3 class="snapshot-label">Процессы</h3>
+            </div>
+            <p class="snapshot-text">Архитектура, код-ревью и организация разработки</p>
           </div>
-          <div class="impact-item">
-            <div class="impact-value">Stores</div>
-            <p class="impact-label">релизы в App Store и Google Play</p>
+          <div class="snapshot-item">
+            <div class="snapshot-head">
+              <svg class="snapshot-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6.5 6.5h11v11h-11z"/>
+                <path d="M9 3.5h6M9 20.5h6M3.5 9v6M20.5 9v6"/>
+              </svg>
+              <h3 class="snapshot-label">Релизы</h3>
+            </div>
+            <p class="snapshot-text">Продакшен, публикация в магазинах приложений и поддержка после релиза</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="work" aria-labelledby="work-title">
-      <p class="section-label reveal">Избранные работы</p>
-      <h2 class="section-title reveal" id="work-title">Сложные задачи, доведённые до продакшена</h2>
+      <p class="section-label reveal">Опыт</p>
+      <h2 class="section-title reveal" id="work-title">Профессиональный опыт</h2>
       <p class="section-lead reveal">
-        Три кейса с разными инженерными осями: performance и New Architecture,
-        fintech-security на стыке native/JS, и greenfield delivery мобильной экосистемы.
+        Опыт в разных отраслях и форматах продуктов: финтех, корпоративные продукты,
+        высоконагруженные и масштабируемые сервисы; мобильная и веб-разработка —
+        от задач с повышенными требованиями к безопасности до миграций легаси и запуска с нуля.
       </p>
 
       <div class="cases">
-        <article class="case reveal" aria-labelledby="case-babyhelper">
-          <div class="case-visual viz-grid" aria-hidden="true">
-            <div class="case-visual-inner">
-              <span class="case-visual-tag">Performance</span>
-              <div class="case-metric-stack">
-                <p class="case-metric">~15×<span>быстрее cold start</span></p>
-                <p class="case-metric">6&nbsp;000+<span>LOC снято с легаси</span></p>
-              </div>
-            </div>
+        <article class="case reveal" aria-labelledby="case-a4ord">
+          <div class="case-visual" aria-hidden="true">
+            <svg class="case-visual-svg case-visual-svg--shield" viewBox="0 0 64 64" focusable="false">
+              <path class="viz-mark" d="M32 8l20 8v16c0 14-8 24-20 28C20 56 12 46 12 32V16l20-8z"/>
+              <circle class="viz-mark" cx="32" cy="30" r="8"/>
+              <path class="viz-soft" d="M32 26v8M29 30h6"/>
+            </svg>
           </div>
           <div class="case-body">
             <p class="case-kicker">Проект 01</p>
-            <h3 class="case-title" id="case-babyhelper">
-              <a href="https://babyhelper.ru/" target="_blank" rel="noopener noreferrer">BabyHelper</a>
-            </h3>
-            <p class="case-role">Старший React Native разработчик · мобильная экосистема для молодых родителей</p>
-            <div class="case-story">
-              <div class="case-step">
-                <h4>Контекст</h4>
-                <p>Продукт проходил кризисный этап стагнации: тяжёлое легаси, устаревшие SDK и замедленный цикл разработки.</p>
-              </div>
-              <div class="case-step">
-                <h4>Задача</h4>
-                <p>Восстановить инженерные процессы, убрать архитектурный долг и вернуть предсказуемую performance-характеристику приложения.</p>
-              </div>
-              <div class="case-step">
-                <h4>Что сделал</h4>
-                <p>Выстроил декомпозицию, оценку и code review; провёл аудит и рефакторинг (удаление 15+ несовместимых библиотек); совместно с бэкендом перестроил API-запросы; спланировал и выполнил миграцию на New Architecture; исправил критические баги трекинга; внедрил Dark Mode.</p>
-              </div>
-              <div class="case-step">
-                <h4>Результат</h4>
-                <p>Сокращение бандла и ускорение cold start примерно в 15 раз; устранение overhead старого Bridge; рост оценок в App Store и Google Play за счёт стабилизации ключевых сценариев.</p>
-              </div>
-            </div>
-            <div class="tech-row" aria-label="Технологии">
-              <span>React Native</span><span>MobX</span><span>FlashList</span><span>MMKV</span><span>Reanimated</span><span>Firebase</span><span>Fabric / TurboModules</span>
-            </div>
-            <a class="case-link" href="https://babyhelper.ru/" target="_blank" rel="noopener noreferrer">Открыть проект →</a>
-          </div>
-        </article>
-
-        <article class="case reveal" aria-labelledby="case-a4ord">
-          <div class="case-visual viz-security" aria-hidden="true">
-            <div class="case-visual-inner">
-              <span class="case-visual-tag">Security · Native</span>
-              <div class="bars"><i></i><i></i><i></i></div>
-              <div class="case-metric-stack">
-                <p class="case-metric">3DS · Pinning<span>банковский уровень защиты</span></p>
-                <p class="case-metric">Keychain<span>Secure Enclave / Keystore</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="case-body">
-            <p class="case-kicker">Проект 02</p>
             <h3 class="case-title" id="case-a4ord">
               <a href="https://a4ord.de/" target="_blank" rel="noopener noreferrer">A4ord</a>
             </h3>
-            <p class="case-role">Старший Frontend-разработчик · немецкий финтех: банковское приложение и маркетплейс</p>
+            <p class="case-summary">Немецкий финтех: банковское приложение и маркетплейс</p>
+            <p class="case-role">Старший фронтенд-разработчик</p>
             <div class="case-story">
               <div class="case-step">
                 <h4>Контекст</h4>
-                <p>Финтех-стартап с мобильным банкингом и веб-маркетплейсом, где критичны безопасность транзакций и стабильность релизов.</p>
+                <p>Стартап с мобильным банкингом и веб-маркетплейсом. Критичны безопасность транзакций и стабильность релизов.</p>
               </div>
               <div class="case-step">
                 <h4>Задача</h4>
-                <p>Возглавить мобильную разработку, закрыть security-требования банковского уровня и параллельно усилить веб-часть на Next.js.</p>
+                <ul>
+                  <li>Возглавить команду мобильной разработки и выстроить процессы</li>
+                  <li>Реализовать модули безопасности на стыке нативного и JS-кода</li>
+                  <li>Закрыть банковские требования: 3D Secure, SSL Pinning, Smart Agent</li>
+                  <li>Сделать фронтенд мультиязычного маркетплейса на Next.js</li>
+                </ul>
               </div>
               <div class="case-step">
                 <h4>Что сделал</h4>
-                <p>Выстроил планирование, оценку и review; реализовал Keychain/Keystore и device binding; внедрил 3D Secure, SSL Pinning и Smart Agent; собрал error-handling и push по статусам транзакций; сделал мультиязычный маркетплейс на Next.js с SSR.</p>
+                <ul>
+                  <li>Выстроил планирование, оценку, распределение задач и регулярный код-ревью</li>
+                  <li>Реализовал Keychain (Secure Enclave) / Keystore и жёсткую привязку устройств</li>
+                  <li>Внедрил 3D Secure для транзакций, SSL Pinning против MITM-атак и Smart Agent для выявления мошенничества</li>
+                  <li>Собрал мультиязычный маркетплейс на Next.js с SSR</li>
+                </ul>
               </div>
               <div class="case-step">
                 <h4>Результат</h4>
-                <p>Прозрачные спринты и стабильные релизы; критические security-модули на стыке native и JS; SEO-ориентированный веб-фронт маркетплейса.</p>
+                <ul>
+                  <li>Прозрачнее спринты и стабильнее релизы</li>
+                  <li>Банковские требования по безопасности закрыты в продакшене</li>
+                  <li>Маркетплейс с быстрым рендерингом через SSR под SEO</li>
+                </ul>
               </div>
             </div>
             <div class="tech-row" aria-label="Технологии">
@@ -237,39 +231,109 @@
           </div>
         </article>
 
-        <article class="case reveal" aria-labelledby="case-pole">
-          <div class="case-visual viz-launch" aria-hidden="true">
-            <div class="viz-orbit"></div>
-            <div class="case-visual-inner">
-              <span class="case-visual-tag">Greenfield · Delivery</span>
-              <div class="case-metric-stack">
-                <p class="case-metric">0 → Store<span>Expo app с нуля</span></p>
-                <p class="case-metric">Web + Admin<span>контент без разработчиков</span></p>
+        <article class="case reveal" aria-labelledby="case-babyhelper">
+          <div class="case-visual" aria-hidden="true">
+            <svg class="case-visual-svg case-visual-svg--heart" viewBox="0 0 64 64" focusable="false">
+              <path class="viz-mark" d="M32 54C32 54 8 38 8 22a12 12 0 0 1 24-4 12 12 0 0 1 24 4c0 16-24 32-24 32z"/>
+            </svg>
+          </div>
+          <div class="case-body">
+            <p class="case-kicker">Проект 02</p>
+            <h3 class="case-title" id="case-babyhelper">
+              <a href="https://babyhelper.ru/" target="_blank" rel="noopener noreferrer">BabyHelper</a>
+            </h3>
+            <p class="case-summary">Мобильная экосистема для молодых родителей</p>
+            <p class="case-role">Старший React Native разработчик</p>
+            <div class="case-story">
+              <div class="case-step">
+                <h4>Контекст</h4>
+                <p>Кризисный этап стагнации: тяжёлое легаси, устаревшие SDK и замедленный цикл разработки.</p>
+              </div>
+              <div class="case-step">
+                <h4>Задача</h4>
+                <ul>
+                  <li>Провести масштабный аудит и рефакторинг легаси-архитектуры</li>
+                  <li>Мигрировать проект на New Architecture React Native (Fabric, TurboModules, JSI)</li>
+                  <li>Вернуть скорость разработки и стабильность продукта</li>
+                </ul>
+              </div>
+              <div class="case-step">
+                <h4>Что сделал</h4>
+                <ul>
+                  <li>Наладил декомпозицию, точную оценку задач и регламент работы с техническим долгом</li>
+                  <li>Удалил более 6&nbsp;000 строк избыточного кода и 15+ несовместимых SDK; перестроил архитектуру API-запросов вместе с бэкендом</li>
+                  <li>Спланировал и выполнил миграцию на New Architecture</li>
+                  <li>Исправил критические баги в ключевых разделах трекинга</li>
+                  <li>Внедрил тёмную тему для всего интерфейса</li>
+                </ul>
+              </div>
+              <div class="case-step">
+                <h4>Результат</h4>
+                <ul>
+                  <li>Преодолён кризисный этап стагнации продукта</li>
+                  <li>Бандл меньше, время входа быстрее примерно в 15 раз</li>
+                  <li>Устранены накладные расходы старого Bridge, нативные модули грузятся лениво</li>
+                  <li>Рост оценок в App Store и Google Play за счёт стабилизации ключевых сценариев</li>
+                </ul>
               </div>
             </div>
+            <div class="tech-row" aria-label="Технологии">
+              <span>React Native</span><span>MobX</span><span>FlashList</span><span>MMKV</span><span>Reanimated</span><span>Firebase</span><span>Fabric / TurboModules</span>
+            </div>
+            <a class="case-link" href="https://babyhelper.ru/" target="_blank" rel="noopener noreferrer">Открыть проект →</a>
+          </div>
+        </article>
+
+        <article class="case reveal" aria-labelledby="case-pole">
+          <div class="case-visual" aria-hidden="true">
+            <svg class="case-visual-svg case-visual-svg--wheat" viewBox="0 0 64 64" focusable="false">
+              <g class="viz-sun">
+                <circle class="viz-soft" cx="46" cy="16" r="7"/>
+                <path class="viz-soft" d="M46 6v3M55 16h3M37 16h-3M52 10l-2 2M40 22l-2 2"/>
+              </g>
+              <g class="viz-ear">
+                <path class="viz-mark" d="M28 56V24"/>
+                <path class="viz-mark" d="M28 28c-6-4-8-8-8-8M28 28c6-4 8-8 8-8M28 36c-7-3-10-8-10-8M28 36c7-3 10-8 10-8M28 44c-7-2-11-7-11-7M28 44c7-2 11-7 11-7"/>
+              </g>
+            </svg>
           </div>
           <div class="case-body">
             <p class="case-kicker">Проект 03</p>
             <h3 class="case-title" id="case-pole">
               <a href="https://xn--e1alid.xn--p1ai/" target="_blank" rel="noopener noreferrer">Поле.рф</a>
             </h3>
-            <p class="case-role">Старший Frontend-разработчик · платформа цифровой трансформации сельского хозяйства</p>
+            <p class="case-summary">Платформа для сельского хозяйства</p>
+            <p class="case-role">Старший фронтенд-разработчик</p>
             <div class="case-story">
               <div class="case-step">
                 <h4>Контекст</h4>
-                <p>Нужно было расширить экосистему платформы в мобильный канал и обновить ключевые веб-поверхности.</p>
+                <p>Нужно было вывести платформу в мобильный канал и обновить ключевые страницы сайта для пользователей и контент-команды.</p>
               </div>
               <div class="case-step">
                 <h4>Задача</h4>
-                <p>Спроектировать и запустить мобильное приложение, выстроить push-коммуникации и дать контент-команде инструменты без привлечения разработки.</p>
+                <ul>
+                  <li>Спроектировать архитектуру и запустить мобильное приложение с нуля на Expo</li>
+                  <li>Полностью переработать главную и раздел «Журнал»</li>
+                  <li>Интегрировать админку для динамического управления контентом</li>
+                </ul>
               </div>
               <div class="case-step">
                 <h4>Что сделал</h4>
-                <p>С нуля собрал Expo-приложение с переносом ключевых сервисов; реализовал сквозные push-нотификации; обновил главную и «Журнал»; разработал админку для динамического контента; провёл публикацию в Google Play и App Store.</p>
+                <ul>
+                  <li>С нуля собрал Expo-приложение с переносом ключевых сервисов экосистемы</li>
+                  <li>Реализовал сквозные push-уведомления</li>
+                  <li>Обновил главную и «Журнал»</li>
+                  <li>Интегрировал админку для контента главной и журнала</li>
+                  <li>Провёл публикацию и модерацию в Google Play и App Store</li>
+                </ul>
               </div>
               <div class="case-step">
                 <h4>Результат</h4>
-                <p>Мобильный канал экосистемы в сторах; оперативные уведомления для удержания аудитории; контент-обновления в реальном времени без разработчиков.</p>
+                <ul>
+                  <li>Мобильный канал экосистемы доступен в магазинах приложений</li>
+                  <li>Пользователи получают оперативные уведомления</li>
+                  <li>Контент-команда обновляет данные без разработчиков</li>
+                </ul>
               </div>
             </div>
             <div class="tech-row" aria-label="Технологии">
@@ -282,9 +346,12 @@
     </section>
 
     <section class="section" id="expertise" aria-labelledby="expertise-title">
-      <p class="section-label reveal">Экспертиза</p>
-      <h2 class="section-title reveal" id="expertise-title">Стек, которым реально работаю</h2>
-      <p class="section-lead reveal">Иерархия отражает повседневную практику: от ядра платформы до native-слоя и процессов поставки.</p>
+      <p class="section-label reveal">Навыки</p>
+      <h2 class="section-title reveal" id="expertise-title">Технические навыки</h2>
+      <p class="section-lead reveal">
+        Языки и фреймворки, управление состоянием и данными, нативная разработка,
+        инструменты и экосистема, инфраструктура и процессы.
+      </p>
 
       <div class="expertise-grid reveal">
         <div class="expertise-group core">
@@ -339,35 +406,66 @@
             <li>React Native Firebase</li>
             <li>Jira / Confluence</li>
             <li>Scrum / Kanban</li>
-            <li>Code review &amp; architecture</li>
+            <li>Код-ревью и архитектура</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section" id="more" aria-labelledby="more-title">
-      <p class="section-label reveal">Другие проекты</p>
-      <h2 class="section-title reveal" id="more-title">Другие поставки</h2>
+      <p class="section-label reveal">Опыт</p>
+      <h2 class="section-title reveal" id="more-title">Другие проекты</h2>
       <ul class="more-list">
         <li class="more-item reveal">
-          <h3><a href="https://chachat.app/" target="_blank" rel="noopener noreferrer">ChaChat · Neiro.ai</a></h3>
-          <p>Real-time ИИ-чат: стабилизация WebSocket-логики, OAuth 2.0 (Apple / Google), продуктовая аналитика воронок.</p>
-          <span class="more-role">Senior React Native</span>
+          <div class="more-head">
+            <h3><a href="https://chachat.app/" target="_blank" rel="noopener noreferrer">ChaChat · Neiro.ai</a></h3>
+            <p class="more-summary">ИИ-чат-ассистент</p>
+          </div>
+          <ul class="more-lines">
+            <li>Устранил критические баги в чатах в реальном времени и стабилизировал мобильное приложение перед раундом продвижения</li>
+            <li>Добавил вход через Apple и Google (OAuth 2.0), повысив конверсию в регистрацию</li>
+            <li>Спроектировал систему обработки ошибок и модуль push-уведомлений</li>
+            <li>Настроил продуктовую аналитику и воронки в чатах для оценки удержания</li>
+          </ul>
+          <span class="more-role">Старший React Native разработчик</span>
         </li>
         <li class="more-item reveal">
-          <h3>ГЗКтур</h3>
-          <p>Архитектура с нуля: поиск и покупка туров, пешие маршруты с картами и аудиогидами; отдельное приложение «Былинный путь»; релизы в сторах.</p>
-          <span class="more-role">Senior React Native</span>
+          <div class="more-head">
+            <h3><a href="https://www.mbsicorp.com/recovery-connect-mobile" target="_blank" rel="noopener noreferrer">RCM</a></h3>
+            <p class="more-summary">Автофинансирование</p>
+          </div>
+          <ul class="more-lines">
+            <li>Миграция с Expo на React Native CLI для доступа к нативным библиотекам</li>
+            <li>Рефакторинг легаси и обновление зависимостей — меньше ошибок в рантайме и стабильнее работа приложения</li>
+            <li>Интегрировал биометрическую аутентификацию для входа в приложение</li>
+            <li>Запуск того же приложения в Desktop и Web через Electron — без отдельных версий продукта</li>
+          </ul>
+          <span class="more-role">React Native разработчик</span>
         </li>
         <li class="more-item reveal">
-          <h3><a href="https://www.mbsicorp.com/recovery-connect-mobile" target="_blank" rel="noopener noreferrer">RCM</a></h3>
-          <p>Миграция Expo → React Native CLI, рефакторинг легаси, биометрия, desktop/web через Electron.</p>
-          <span class="more-role">React Native Developer</span>
+          <div class="more-head">
+            <h3>ГЗКтур</h3>
+            <p class="more-summary">Туристический портал</p>
+          </div>
+          <ul class="more-lines">
+            <li>Спроектировал масштабируемую архитектуру мобильного приложения с нуля</li>
+            <li>Поиск, бронирование и сквозная покупка туров; пешие маршруты с картами, аудиогидами и геопозиционированием</li>
+            <li>Вывел в прод отдельное приложение «Былинный путь» с игровыми квестами</li>
+            <li>Разместил оба продукта в Google Play и App Store</li>
+          </ul>
+          <span class="more-role">Старший React Native разработчик</span>
         </li>
         <li class="more-item reveal">
-          <h3><a href="https://transparentbusiness.com/" target="_blank" rel="noopener noreferrer">Transparent Business</a></h3>
-          <p>Ранний фронтенд unicorna: рефакторинг, адаптивная вёрстка, мультиязычность и базовая SEO-оптимизация.</p>
-          <span class="more-role">Frontend Developer</span>
+          <div class="more-head">
+            <h3><a href="https://transparentbusiness.com/" target="_blank" rel="noopener noreferrer">Transparent Business</a></h3>
+            <p class="more-summary">Компания-юникорн</p>
+          </div>
+          <ul class="more-lines">
+            <li>Рефакторинг кода и шаблонов — измеримый прирост скорости загрузки страниц</li>
+            <li>Адаптивная кроссбраузерная вёрстка под разные устройства</li>
+            <li>Мультиязычность и базовая SEO-оптимизация (мета-теги)</li>
+          </ul>
+          <span class="more-role">Фронтенд-разработчик</span>
         </li>
       </ul>
     </section>
@@ -377,8 +475,9 @@
       <h2 class="section-title reveal" id="credentials-title">Образование и квалификация</h2>
       <div class="creds-grid">
         <div class="cred-block reveal">
-          <h3>Витебский государственный университет</h3>
+          <h3>Витебский государственный университет имени Машерова</h3>
           <ul>
+            <li>Факультет математики и информационных технологий</li>
             <li>Специальность: Программное обеспечение информационных технологий</li>
             <li>Квалификация: Инженер-программист</li>
           </ul>
@@ -406,14 +505,14 @@
       <div class="contact-panel">
         <div>
           <h2 class="section-title reveal" id="contact-title">Давайте обсудим задачу</h2>
-          <p class="section-lead reveal">Открыт к роли Senior React / React Native и к сложным mobile/web продуктам.</p>
+          <p class="section-lead reveal">Открыт к роли старшего React / React Native разработчика и к сложным мобильным и веб-продуктам.</p>
         </div>
         <ul class="contact-links reveal">
           <li><a href="https://t.me/r_sarviro">Telegram <span>@r_sarviro</span></a></li>
           <li><a href="mailto:r.sarviro@gmail.com">Email <span>r.sarviro@gmail.com</span></a></li>
           <li><a href="https://www.linkedin.com/in/roman-sarviro-22014b246/?locale=ru-RU">LinkedIn <span>roman-sarviro</span></a></li>
           <li><a href="https://github.com/r-sarviro">GitHub <span>r-sarviro</span></a></li>
-          <li><a href="https://hh.ru/resume/9f227656ff10aa53c80039ed1f624e5a383946">hh.ru <span>резюме</span></a></li>
+          <li><a href="https://hh.ru/resume/9f227656ff10aa53c80039ed1f624e5a383946">hh.ru <span>Резюме</span></a></li>
         </ul>
       </div>
     </section>
@@ -422,7 +521,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p>© <span id="year"></span> Roman Sarviro</p>
-      <p>Senior React / React Native Engineer</p>
+      <p>Старший React / React Native разработчик</p>
     </div>
   </footer>
 
