@@ -1,8 +1,10 @@
 # Roman Sarviro — Portfolio
 
-Static personal portfolio (HTML / CSS / JS) for GitHub Pages.
+Static personal portfolio (HTML / CSS / JS). No build step.
 
-**Live (after Pages is enabled):** https://r-sarviro.github.io/portfolio/
+**Live:** https://r-sarviro.github.io/portfolio/
+
+Hosted on GitHub Pages from the `main` branch (root). Deploy is automatic on push.
 
 ## Locales
 
@@ -11,41 +13,34 @@ Static personal portfolio (HTML / CSS / JS) for GitHub Pages.
 | `/` or `index.html` | Russian  |
 | `/en/`              | English  |
 
-## Run locally
+## Features
 
-From this directory:
+- Light / dark theme (persisted in `localStorage`, default dark)
+- Responsive layout with mobile nav
+- Resume PDF download and share (Contact)
+- SEO: Open Graph, Twitter cards, JSON-LD, sitemap, hreflang
+- Pageviews via [GoatCounter](https://www.goatcounter.com/) — dashboard: https://r-sarviro.goatcounter.com
+
+## Run locally
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open http://localhost:8080/
-
-Or use any static file server / Live Server.
+Open http://localhost:8080/ (or any static file server / Live Server).
 
 ## Structure
 
 ```
 index.html          # RU page
 en/index.html       # EN page
-css/                # design tokens + layout + components
-js/main.js          # nav, scroll header, reveal + reduced motion
-assets/             # portrait and media
-favicon.svg
+css/                # tokens, base, layout, components
+js/main.js          # theme, nav, scroll header, reveal, share
+assets/             # portrait, OG covers, resume PDFs, certificate
+favicon.svg / .ico
 robots.txt
 sitemap.xml
 ```
-
-## GitHub Pages
-
-Code is on `main`. Enable hosting once:
-
-1. Open https://github.com/r-sarviro/portfolio/settings/pages
-2. **Source:** Deploy from a branch
-3. **Branch:** `main` / folder: `/` (root) → Save
-4. Site URL: https://r-sarviro.github.io/portfolio/
-
-No build step is required.
 
 ## Content sources
 
