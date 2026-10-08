@@ -43,6 +43,17 @@ body {
   transition: color 0.25s var(--ease), background 0.25s var(--ease);
 }
 
+@media (max-width: 1024px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+body.nav-open {
+  overflow-x: clip;
+  overflow-y: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;

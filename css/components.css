@@ -699,7 +699,7 @@ a.cred-block .cred-action {
   color: var(--muted);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -709,8 +709,8 @@ a.cred-block .cred-action {
   }
 
   .hero-media {
-    justify-self: start;
-    width: min(100%, 18rem);
+    justify-self: center;
+    width: min(100%, 20rem);
     order: -1;
     padding-top: 1rem;
     padding-right: 1rem;
@@ -765,7 +765,7 @@ a.cred-block .cred-action {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .snapshot-grid {
     grid-template-columns: 1fr;
   }

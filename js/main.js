@@ -81,8 +81,15 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.matchMedia("(min-width: 861px)").matches) {
+      if (window.matchMedia("(min-width: 769px)").matches) {
         setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && document.body.classList.contains("nav-open")) {
+        setOpen(false);
+        navToggle.focus();
       }
     });
   }

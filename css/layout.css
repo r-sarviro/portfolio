@@ -3,6 +3,7 @@
   top: 0;
   z-index: 100;
   height: var(--header-h);
+  padding-top: env(safe-area-inset-top, 0px);
   display: flex;
   align-items: center;
   backdrop-filter: blur(14px);
@@ -78,7 +79,12 @@
 }
 
 .locale-switch a {
-  padding: 0.35rem 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.75rem;
   font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -95,8 +101,8 @@
 .theme-toggle {
   display: inline-grid;
   place-items: center;
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
   color: var(--ink-soft);
@@ -142,8 +148,8 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
   color: var(--ink-soft);
@@ -206,6 +212,7 @@ body.nav-open .nav-toggle__bar:nth-child(3) {
   font-size: var(--text-2xl);
   max-width: 18ch;
   margin-bottom: var(--space-5);
+  overflow-wrap: anywhere;
 }
 
 .section-lead {
@@ -256,7 +263,28 @@ html.no-js .reveal {
   font-size: var(--text-sm);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 425px) {
+  .brand {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.625rem, 8vw, 2rem);
+  }
+
+  /* One cell: only the alternate locale (tap to switch) */
+  .locale-switch a[aria-current="page"] {
+    display: none;
+  }
+
+  .locale-switch a:not([aria-current="page"]) {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+
+@media (max-width: 768px) {
   .nav-toggle {
     display: inline-flex;
   }

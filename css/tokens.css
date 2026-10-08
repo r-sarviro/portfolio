@@ -84,5 +84,5 @@
   --text-3xl: clamp(2.75rem, 7vw, 4.75rem);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --header-h: 4rem;
+  --header-h: calc(4rem + env(safe-area-inset-top, 0px));
 }
