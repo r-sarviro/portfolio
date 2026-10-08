@@ -94,6 +94,44 @@
     });
   }
 
+  const shareResumeBtn = document.querySelector("[data-share-resume]");
+
+  if (shareResumeBtn) {
+    const probeFile = new File(["."], "resume.pdf", { type: "application/pdf" });
+    const canShareResume =
+      typeof navigator.share === "function" &&
+      !!navigator.canShare?.({ files: [probeFile] });
+
+    // Remove instead of [hidden]: .btn { display } overrides the hidden attribute.
+    if (!canShareResume) {
+      shareResumeBtn.remove();
+    } else {
+      shareResumeBtn.addEventListener("click", async () => {
+        const relativeUrl = shareResumeBtn.dataset.shareUrl;
+        if (!relativeUrl) return;
+
+        const absoluteUrl = new URL(relativeUrl, window.location.href).href;
+        const filename =
+          shareResumeBtn.dataset.shareFilename || "Roman-Sarviro-Resume.pdf";
+        const title = shareResumeBtn.dataset.shareTitle || document.title;
+        const text = shareResumeBtn.dataset.shareText || title;
+
+        try {
+          const response = await fetch(absoluteUrl);
+          if (!response.ok) throw new Error("Failed to fetch resume");
+          const blob = await response.blob();
+          const file = new File([blob], filename, {
+            type: blob.type || "application/pdf",
+          });
+
+          await navigator.share({ files: [file], title, text });
+        } catch (error) {
+          if (error && error.name === "AbortError") return;
+        }
+      });
+    }
+  }
+
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const reveals = document.querySelectorAll(".reveal");
 

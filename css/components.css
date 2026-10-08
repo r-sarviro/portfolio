@@ -666,6 +666,12 @@ a.cred-block .cred-action {
   align-items: center;
 }
 
+.contact-resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
 .contact-links {
   list-style: none;
   display: grid;
@@ -781,7 +787,8 @@ a.cred-block .cred-action {
     padding-bottom: 0;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .contact-resume {
     flex-direction: column;
     align-items: stretch;
   }
