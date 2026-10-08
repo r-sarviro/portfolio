@@ -2,9 +2,6 @@
   const THEME_KEY = "portfolio-theme";
   const root = document.documentElement;
   const header = document.querySelector(".site-header");
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav");
-  const navLinks = document.querySelectorAll(".nav a[href^='#']");
   const themeToggle = document.querySelector("[data-theme-toggle]");
 
   const getPreferredTheme = () => {
@@ -50,17 +47,43 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-nav]");
+
+  if (navToggle && nav) {
+    const setOpen = (isOpen) => {
+      document.body.classList.toggle("nav-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      const openLabel = navToggle.getAttribute("data-label-open") || "Open menu";
+      const closeLabel = navToggle.getAttribute("data-label-close") || "Close menu";
+      navToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
+    };
+
+    navToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!document.body.classList.contains("nav-open"));
     });
 
-    navLinks.forEach((link) => {
+    nav.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+        setOpen(false);
       });
+    });
+
+    document.addEventListener("click", () => {
+      if (document.body.classList.contains("nav-open")) {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 861px)").matches) {
+        setOpen(false);
+      }
     });
   }
 
